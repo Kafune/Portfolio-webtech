@@ -1,0 +1,747 @@
+/*font import*/
+@font-face {
+    font-family: "Montserrat Regular";
+    src: url("../fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat Bold";
+    src: url("../fonts/Montserrat-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat Light";
+    src: url("../fonts/Montserrat-Light.ttf");
+}
+
+@font-face {
+    font-family: "Nagayama Kai";
+    src: url("../fonts/Nayayama-Kai.otf");
+}
+
+/*Default = mobile portrait*/
+h1, h2, b {
+    font-family: "Montserrat Bold";
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #6C5531;
+}
+
+p, span {
+    font-family: "Montserrat Regular";
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background: #f7f7f7;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-family: "Segoe UI", sans-serif, Arial;
+}
+
+/* Default */
+.container {
+    height: auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.container hr {
+    display: block;
+    border-top: solid #d8a237 2px;
+    width: 200px;
+    margin: 20px auto;
+}
+
+.display-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.intro {
+    text-align: left;
+    margin: 20px;
+}
+
+section span, article span {
+    font-family: "Montserrat Bold";
+    font-weight: bold;
+    color: #6972E7;
+}
+
+section, article, figure {
+    width: 100%;
+    padding: 25px;
+}
+
+section h2, article h2 {
+    padding: 10px 0;
+}
+
+section a, article a {
+    text-decoration: none;
+    color: #6972E7;
+}
+
+/*menu*/
+#menu {
+    height: 90px;
+    background: #6972E7;
+    width: 100%;
+    position: relative;
+    z-index: 99;
+    justify-content: space-evenly;
+}
+
+#menu h1 a {
+    padding: 28px 0;
+    font-family: "Nagayama Kai";
+    text-decoration: none;
+    color: #353532;
+    font-size: 40px;
+
+}
+
+#menu ul {
+    display: none;
+    order: 1;
+    list-style-type: none;
+    position: relative;
+
+}
+
+#menu ul li {
+    height: 100%;
+    margin: 0 1em;
+    border: solid #000000 1px;
+    background-color: #003a77;
+}
+
+#menu ul li:hover {
+    background-color: #3D6B81;
+
+}
+
+#menu ul li a:hover, a:hover {
+    color: #d8a237;
+}
+
+#menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 28px;
+    padding: 26px 10px;
+
+}
+
+#menu ul li ul {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 175px;
+}
+
+#menu ul li ul li {
+    width: 100%;
+    margin: 0;
+
+}
+
+#menu li:hover > ul {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#menu a span, a span:before, a span:after {
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    background-color: #ffffff;
+    content: "";
+}
+
+#menu a span:before {
+    top: -16px;
+}
+
+#menu a span:after {
+    top: 16px;
+}
+
+/*Mobile menu*/
+#m-menu {
+    width: 100%;
+}
+
+#m-menu ul {
+    list-style-type: none;
+    width: 100%;
+}
+
+#m-menu ul li {
+    padding: 0.5em;
+    background-color: #6972E7;
+    color: #ffffff;
+    border: solid #191682 1px;
+    width: 100%;
+    position: relative;
+}
+
+#m-menu ul li label {
+    padding: 4px 15px;
+    position: absolute;
+    left: 80px;
+    bottom: 3px;
+    border: solid black 1px;
+    background-color: #191682;
+}
+
+#m-menu ul li a, #menu ul li a {
+    display: block;
+    color: #ffffff;
+    width: 100%;
+    height: auto;
+}
+
+#m-menu ul li ul li {
+    margin: 4px 0;
+}
+
+#m-menu ul li ul, #m-menu input[type=checkbox] {
+    display: none;
+}
+
+#m-menu input[type=checkbox]:checked +
+ul {
+    display: block;
+}
+
+ul li label {
+    top: 3px;
+    bottom: auto !important;
+}
+
+/*Homepage banner*/
+#banner {
+    background-image: url("../img/a-wallpaper.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+#banner .banner-box {
+    height: auto !important;
+    width: 100%;
+    bottom: 0;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+#banner .banner-content {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(105, 114, 231, 0.75);
+    margin: 1em 0;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+#banner .banner-content h1 {
+    font-family: "Yu Mincho";
+}
+
+#banner .banner-image {
+    order: 1;
+    background-color: rgba(230, 230, 230, 0.5);
+}
+
+#banner .banner-image img {
+    border-radius: 50%;
+    width: 100%;
+    height: 300px;
+}
+
+/*Header*/
+#header {
+    height: 200px;
+    width: 100%;
+    background-image: url("../img/irozuku-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#header h1 {
+    font-family: "Yu Mincho";
+    color: #f7f7f7;
+    background: rgba(50, 50, 50, 0.8);
+    padding: 0 15px;
+}
+
+#header a {
+    text-decoration: none;
+}
+
+#header a:hover {
+    text-decoration: underline;
+    text-decoration-color: #3edcff;
+}
+
+#header, #header iframe {
+    border-top: solid #6C5531 1px;
+    border-bottom: solid #6C5531 1px;
+    width: 100%;
+}
+
+.rowe-header {
+    background-image: url("../img/rowe.PNG") !important;
+}
+
+.miefabriek-header {
+    background-image: url("../img/de-miefabriek.PNG") !important;
+}
+
+/*Personalia*/
+#about-me .profielfoto {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+#about-me .baron-mirror, #about-me .baron {
+    display: none;
+    width: 275px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+}
+
+#about-me .personal-info {
+    width: 325px;
+    position: relative;
+    margin: 0 auto;
+    flex-flow: column wrap;
+}
+
+/*Project overview*/
+#project-overview article img {
+    width: 100%;
+}
+
+#project-overview .project-display, .contact-display {
+    flex-flow: column wrap;
+    text-align: center;
+}
+
+#project-overview .project-display {
+    text-align: center;
+    width: 100%;
+    margin: 0 -15px;
+    align-items: stretch;
+}
+
+
+/*Contact formulier*/
+#contact h1 {
+    color: #6C5531;
+    font-family: "Yu Mincho";
+    text-align: center;
+}
+
+#contact .contact-display {
+    align-items: flex-start;
+    text-align: left;
+}
+
+#contact .contact-display input, #contact .contact-display textarea {
+    margin-bottom: 15px;
+    border-radius: 25px;
+    width: 100%;
+    padding: 10px;
+}
+
+#contact .contact-display input[type="radio"] {
+    width: auto;
+    margin: 0 10px;
+}
+
+#contact .contact-display fieldset {
+    border: none;
+    margin-bottom: 15px;
+}
+
+#contact .contact-display textarea {
+    height: 150px;
+    resize: none;
+}
+
+#contact .contact-display .submit-btn {
+    width: 250px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#contact .contact-display input[type="submit"] {
+    background-color: #6972E7;
+    color: #fff;
+    box-shadow: 10px 10px 25px rgba(105, 114, 231, 0.75);
+}
+
+/*Berichten in het webpagina*/
+.note-message {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.note-message h2 {
+    color: #000000 !important;
+}
+.success {
+    background: #12b914 !important;
+}
+
+.failed {
+    background: #b9281c !important;
+}
+
+/*Project detail*/
+#projectdetail .development-display {
+    flex-direction: column;
+}
+
+#projectdetail .development-display figure img {
+    width: 100%;
+    height: 100%;
+}
+
+#projectdetail .development-display section {
+    padding: 0;
+}
+
+
+#projectdetail #rowe-video {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/*Back to top button*/
+.top-button {
+    background-color: rgba(59, 255, 235, 0.50);
+    font-size: 3em;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 25%;
+    z-index: 9;
+}
+
+.top-button a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    padding: 0 20px;
+}
+
+/*Footer*/
+#footer {
+    height: 45px;
+    background-color: #6972E7;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    clear: both;
+}
+
+/*Login*/
+#login {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+}
+#login .login-display {
+    /*position: absolute;*/
+
+}
+
+#login .login-display input{
+    /*background-color: lightgray;*/
+    margin-bottom: 15px;
+    width: 275px;
+    padding: 10px;
+}
+
+/*BLOG*/
+#blog .blog-display {
+    margin: 0 -15px;
+    align-items: stretch;
+}
+#blog .blog-display article {
+    border: solid #49494b 1px;
+
+
+}
+#blog .blog-display h2 {
+    margin: 0;
+}
+#blog .blog-display h4 {
+    padding: 0 0 20px 0;
+}
+
+#blog .blog-display hr {
+    border-top: solid #000000 2px;
+    margin: 10px auto;
+    width: 100%;
+}
+
+#blog .blog-display input {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+}
+
+#blog .blog-search {
+    width: 35%;
+}
+
+/*ADMIN PAGINA*/
+#admin h1 {
+    margin-bottom: 40px;
+}
+#admin h2 {
+    color: #416ab9;
+}
+#admin .admin-form {
+    justify-content: left;
+}
+#admin .admin-form input, textarea {
+    width: 500px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+#admin .admin-form textarea {
+    height: 250px;
+    resize: none;
+}
+#admin .admin-form input[type="submit"] {
+    background-color: #6972E7;
+    font-family: "Yu Mincho";
+    font-size: 18px;
+    color: #ffffff;
+    border: solid 1px black;
+    box-shadow: 10px 10px 25px rgba(105, 114, 231, 0.75);
+}
+
+/*Admin berichten*/
+#admin table {
+    table-layout: fixed;
+    width: 100%;
+    border: solid black 1px;
+    border-collapse: collapse;
+}
+
+#admin th, td{
+    padding: 30px;
+}
+#admin th {
+    letter-spacing: 2px;
+}
+#admin td {
+    letter-spacing: 1px;
+}
+
+/*Medium devices: Tablet*/
+@media (min-width: 768px) {
+    .container hr {
+        width: 400px;
+    }
+
+    /*menu*/
+    #menu ul {
+        display: flex;
+    }
+
+    /*Mobile menu*/
+    #m-menu, #menu a span {
+        display: none;
+    }
+
+    /*Homepage banner*/
+    #banner {
+        height: 100vh;
+    }
+
+    #banner .banner-box {
+        margin-top: 100px;
+    }
+
+    #banner .banner-content h1 {
+        font-size: 2em;
+    }
+
+    #banner .banner-content p {
+        font-size: 1em;
+    }
+
+    #banner .banner-image img {
+        height: 500px;
+    }
+
+    /*Header*/
+    #header {
+        height: 250px;
+        background-position: 50% 50%;
+    }
+
+    .rowe-header {
+        background-position: 75% 30% !important;
+    }
+
+    .intro {
+        text-align: center;
+    }
+
+    /*Personalia*/
+    #about-me .personal-info {
+        align-items: flex-start;
+        flex-flow: row wrap;
+        width: 100%;
+    }
+
+    #about-me section {
+        flex: 0 50%;
+    }
+
+    #about-me .profielfoto {
+        width: 400px;
+        height: 400px;
+    }
+
+    #about-me .baron-mirror, #about-me .baron {
+        display: block;
+    }
+
+    #about-me .baron-mirror {
+        left: -160px;
+        transform: rotate(47deg);
+    }
+
+    #about-me .baron {
+        right: -160px;
+        transform: rotate(-47deg);
+    }
+
+    /*Projectdetail*/
+    #projectdetail .development-display {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    #projectdetail #rowe-video {
+        height: 500px;
+        object-fit: contain;
+    }
+}
+
+/*Large devices: Desktop */
+@media (min-width: 1200px) {
+    /*Default*/
+    h1 {
+        font-size: 48px;
+    }
+
+    .container hr {
+        width: 600px;
+    }
+
+    /*Homepage banner*/
+    #banner .banner-box {
+        margin-top: 200px;
+        flex-flow: row nowrap;
+    }
+
+    #banner .banner-box div {
+        margin: 0 15px;
+    }
+
+    #banner .banner-content h1 {
+        font-size: 4em;
+    }
+
+    #banner .banner-content p {
+        font-size: 1.5em;
+    }
+
+    /*Header*/
+    #header {
+        height: 300px;
+    }
+
+    .rowe-header {
+        background-position: 75% 25% !important;
+    }
+
+    /*Personalia*/
+    #about-me .profielfoto {
+        position: absolute;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 300px;
+    }
+
+    #about-me .baron-mirror, #about-me .baron {
+        top: 300px;
+    }
+
+    #about-me .baron-mirror {
+        left: -503px;
+        transform: rotate(47deg);
+    }
+
+    #about-me .baron {
+        right: -503px;
+        transform: rotate(-47deg);
+    }
+
+    #about-me .personal-info {
+        align-items: flex-start;
+        flex-flow: row nowrap;
+        width: 100%;
+    }
+
+    /*Project and Contact display*/
+    #project-overview .project-display, #contact .contact-display {
+        flex-flow: row nowrap;
+    }
+
+    /*Project detail*/
+    #projectdetail #rowe-video {
+        height: 600px;
+    }
+}
+
